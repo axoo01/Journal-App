@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Journal App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2309090f'/%3E%3Cpath d='M24 6c-4 2-8 7-9 14l-3 3 2-7c2-3 5-8 10-10z' fill='%23a78bfa'/%3E%3Cpath d='M12 23l-4 3 1-4' stroke='%23f472b6' stroke-width='1.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+
+  <div class="container">
+
+    <header class="app-header">
+      <div class="hicon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+          <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        </svg>
+      </div>
+      <div>
+        <h1>My Journal</h1>
+        <p class="subtitle">Your thoughts, beautifully kept</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <span class="card-label">New Entry</span>
+      <form id="journal-form">
+        <input id="title" type="text" placeholder="Give this moment a title…" required />
+        <textarea id="content" placeholder="What's on your mind today?" required></textarea>
+        <div class="row">
+          <select id="mood" required></select>
+          <button type="submit">
+            Save
+            <span class="btn-plus">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="filter-bar">
+      <span class="flabel">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+        Filter
+      </span>
+      <select id="filter-mood"><option value="">All Moods</option></select>
+    </div>
+
+    <div id="entries"></div>
+
+    <div class="empty-state" id="empty-state">
+      <div class="empty-glyph">✦</div>
+      <p>No entries yet.</p>
+      <small>Start writing your first story above.</small>
+    </div>
+
+  </div>
+
+  <script type="module" src="./dist/ui.js"></script>
+</body>
+</html>
