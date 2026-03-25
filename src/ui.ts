@@ -33,6 +33,9 @@ populateMoodOptions();
 export function renderEntries(entries: Journal): void {
   entriesContainer.innerHTML = "";
 
+  const empty = document.getElementById("empty-state") as HTMLDivElement;
+  empty.style.display = entries.length === 0 ? "block" : "none";
+
   entries.forEach((entry) => {
     const div = document.createElement("div");
     div.className = "entry-card";

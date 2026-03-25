@@ -226,7 +226,7 @@ button[type="submit"]:active { transform: scale(.97); }
 .empty-glyph {
   font-size: 2.2rem; margin-bottom: 12px;
   background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-  display: inline-block; animation: spin 10s linear infinite;
+  display: inline-block; animation: spin 1s;
 }
 .empty-state p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.05rem; color: var(--t2); }
 .empty-state small { font-size: .8rem; margin-top: 6px; display: block; }
@@ -234,7 +234,7 @@ button[type="submit"]:active { transform: scale(.97); }
 /* — Keyframes — */
 @keyframes down { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
 @keyframes up   { from { opacity:0; transform:translateY(20px);  } to { opacity:1; transform:translateY(0); } }
-@keyframes spin  { to   { transform: rotate(360deg); } }
+@keyframes spin  { to   { transform: rotate(180deg); } }
 
 /* — Scrollbar — */
 ::-webkit-scrollbar { width: 6px; }
