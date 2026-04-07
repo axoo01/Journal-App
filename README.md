@@ -2,7 +2,7 @@
 
 A client-side journal application built with TypeScript that allows users to create, manage, and filter personal entries based on mood.
 
-[Live demo](https://journalappx.netlify.app/)
+![Live demo](https://journalappx.netlify.app/)
 
 ---
 
